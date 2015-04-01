@@ -16,6 +16,13 @@
       "js": ["jquery.js", "content_temp.js"]
     }
   ],
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+          "default": "Alt+Shift+F"
+      }
+    }
+  },
   "browser_action": {
     "default_title": "Search with RegEx",
     "default_popup": "popup.html"
