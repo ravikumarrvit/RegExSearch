@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "RegEx",
+  "version": "1",
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "background": {
+      "scripts": ["background.js"],
+      "persistent": true
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "css": ["content.css"],
+      "js": ["jquery.js", "content_temp.js"]
+    }
+  ],
+  "browser_action": {
+    "default_title": "Search with RegEx",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+        "tabs",
+        "notifications",
+        "http://*/",
+        "https://*/",
+        "*://*/"
+  ],
+  "minimum_chrome_version": "28"
+}
